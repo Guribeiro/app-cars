@@ -1,23 +1,7 @@
-import styled from 'styled-components/native';
 import { TouchableOpacityProps } from 'react-native';
-import Loading from '../Loading';
+import Loading from '@shared/components/Loading';
 
-const Container = styled.TouchableOpacity`
-  width: 100%;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  min-height: ${({ theme }) => theme.screen.rem(3.125)}px;
-
-  padding: ${({ theme }) => theme.screen.rem(1)}px;
-  background-color: ${({ theme }) => theme.palett.colors.orange};
-`;
-
-const ButtonText = styled.Text`
-  font-family: 'Roboto_500Medium';
-  font-size: ${({ theme }) => theme.screen.rem(1, true)}px;
-  color: ${({ theme }) => theme.palett.colors.text_primary_opacity_100};
-`;
+import { Container, ButtonText } from './styles';
 
 interface ButtonProps extends TouchableOpacityProps {
   loading?: boolean;

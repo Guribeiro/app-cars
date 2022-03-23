@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import { useCallback } from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useForm, Controller } from 'react-hook-form';
@@ -17,18 +17,9 @@ import Container from '@shared/components/Container';
 import Spacer from '@shared/components/Spacer';
 
 import InputMoney from '@shared/components/Inputs/InputMoney';
-import { useCallback } from 'react';
 import verifyCodeError from '@shared/utils/verifyCodeError';
 
-export const Text = styled.Text`
-  font-family: 'Roboto_500Medium';
-  font-size: ${({ theme }) => theme.screen.rem(1.5)}px;
-  color: ${({ theme }) => theme.palett.colors.text_primary_opacity_100};
-`;
-
-export const TextEmphasized = styled(Text)`
-  color: ${({ theme }) => theme.palett.colors.orange};
-`;
+import { Text, TextEmphasized } from './styles';
 
 interface FormData {
   title: string;

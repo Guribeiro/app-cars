@@ -1,31 +1,13 @@
-import styled from 'styled-components/native';
-import Container from '@shared/components/Container';
-import Contents from '@modules/settings/components/Contents';
-import Spacer from '@shared/components/Spacer';
-import { Feather } from '@expo/vector-icons';
-import Toggle from '@shared/components/Toggle';
-
-import { useTheme } from '@shared/hooks/theme';
 import { useCallback, useState } from 'react';
+import { Feather } from '@expo/vector-icons';
 
-const Row = styled.View`
-  flex-direction: row;
-  align-items: center;
-`;
+import Contents from '@modules/settings/components/Contents';
+import Container from '@shared/components/Container';
+import Spacer from '@shared/components/Spacer';
+import Toggle from '@shared/components/Toggle';
+import { useTheme } from '@shared/hooks/theme';
 
-const PreferenceOptionContainer = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: ${({ theme }) => theme.screen.rem(1)}px 0;
-`;
-
-export const SmallText = styled.Text`
-  font-family: 'Roboto_400Regular';
-  font-size: ${({ theme }) => theme.screen.rem(1)}px;
-  line-height: ${({ theme }) => theme.screen.rem(1.4)}px;
-  color: ${({ theme }) => theme.palett.colors.text_primary_opacity_90};
-`;
+import { PreferenceOptionContainer, Row, SmallText } from './styles';
 
 const Settings = (): JSX.Element => {
   const { customTheme, changeTheme } = useTheme();

@@ -1,4 +1,3 @@
-import styled from 'styled-components/native';
 import { useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
@@ -16,15 +15,13 @@ import Container from '@shared/components/Container';
 import Input from '@shared/components/Inputs/InputText';
 import InputMoney from '@shared/components/Inputs/InputMoney';
 
-export const Text = styled.Text`
-  font-family: 'Roboto_500Medium';
-  font-size: ${({ theme }) => theme.screen.rem(1.5)}px;
-  color: ${({ theme }) => theme.palett.colors.text_primary_opacity_100};
-`;
-
-export const TextEmphasized = styled(Text)`
-  color: ${({ theme }) => theme.palett.colors.orange};
-`;
+import {
+  Text,
+  TextEmphasized,
+  Row,
+  DeleteButton,
+  DeleteButtonText,
+} from './styles';
 
 interface FormData {
   title: string;
@@ -41,22 +38,6 @@ interface EditCarParams {
   price: string;
   age: number;
 }
-
-const Row = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const DeleteButton = styled.TouchableOpacity`
-  align-items: center;
-`;
-
-const DeleteButtonText = styled(Text)`
-  font-size: ${({ theme }) => theme.screen.rem(0.8, true)}px;
-  font-family: 'Roboto_400Regular';
-  line-height: ${({ theme }) => theme.screen.rem(1.4)}px;
-`;
 
 const schema = Yup.object().shape({
   title: Yup.string().required('Informe o modelo do veículo'),
