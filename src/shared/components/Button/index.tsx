@@ -7,7 +7,7 @@ const Container = styled.TouchableOpacity`
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  height: ${({ theme }) => theme.screen.rem(3)}px;
+  min-height: ${({ theme }) => theme.screen.rem(3.125)}px;
 
   padding: ${({ theme }) => theme.screen.rem(1)}px;
   background-color: ${({ theme }) => theme.palett.colors.orange};
