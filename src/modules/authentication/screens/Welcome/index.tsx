@@ -1,9 +1,11 @@
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Button from '@shared/components/Button';
-import homeBackground from '@shared/assets/home-background.png';
-import Text from '@shared/components/Text';
+
 import Container from '@modules/authentication/components/Container';
+
+import Button from '@shared/components/Button';
+import Text from '@shared/components/Text';
+import homeBackground from '@shared/assets/home-background.png';
 
 import { SmallText, TextEmphasized, BackgroundImage } from './styles';
 

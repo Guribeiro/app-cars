@@ -1,6 +1,5 @@
 import 'styled-components';
-// import { theme } from '@utils/theme';
-import type { ResponsiveTheme } from '../src/shared/hooks/theme';
+import type { ResponsiveTheme } from '@shared/hooks/theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme extends ResponsiveTheme {
