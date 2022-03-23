@@ -31,7 +31,7 @@
 
 React native application focused on cars management
 
-## [🌌 See the prototype made with figma](https://www.figma.com/file/D6sSjfVrw1sfjUS8PFrI4A/cars-app?node-id=0%3A1)
+## [🌌 See the prototype made on figma](https://www.figma.com/file/D6sSjfVrw1sfjUS8PFrI4A/cars-app?node-id=0%3A1)
 
 ## 🚀 Technologies
 
@@ -56,8 +56,9 @@ Technologies that I used to develop this mobile application
 
 ### Requirements
 
-- Node version ^16
-- Expo installed
+- [NodeJs](https://nodejs.org/en/)
+- [Expo](https://docs.expo.dev/) installed
+- [Expo Go](https://expo.dev/client) or [Android Studio](https://developer.android.com/studio) installed
 
 **Clone the project and access the folder**
 
@@ -71,14 +72,36 @@ $ git clone git@github.com:Guribeiro/app-cars.git && cd app-cars
 # Install the dependencies
 $ yarn
 
-# Make sure you fill in the API_URL environment variable in the .env file
+#Add a .env file on the project root folder
+
 # Just like in .env.example file
 
-.env.example
-API_URL=API-URL-HERE
+# Make sure you fill in the API_URL environment variable in the .env file
 
-# Start the client
+#.env.example
+API_URL=API-URL-HERE
+```
+
+```bash
+#For running it on your phone, make sure you've installed Expo Go
+
+# Start the application
 $ yarn start
+
+#Open the Expo Go on you phone and select the app-cars project
+```
+
+```bash
+#For running it emulator, make sure you've installed Android Studio
+
+#Step 1 - Click on 'More Actions' > 'Virtual Device Mananger'
+
+#Step 2 - Launch an existing AVD or click on create and add a device
+
+#After all this steps you can start the application
+$ yarn android
+
+#The App will be shown on the Emulated Device
 ```
 
 ## 📝 License
