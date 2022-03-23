@@ -17,9 +17,9 @@ const Routes = (): JSX.Element => {
   const { userName, signInLoading } = useAuthentication();
   const { customTheme } = useTheme();
 
-  if (signInLoading) return <Loading />;
   return (
     <Container>
+      {signInLoading && <Loading />}
       <StatusBar
         translucent
         style={customTheme.palett.title === 'dark' ? 'light' : 'dark'}

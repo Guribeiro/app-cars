@@ -4,7 +4,7 @@ import lottieCarAnimation from '@modules/authentication/assets/car-lottie.json';
 
 import AnimatedLottieView from 'lottie-react-native';
 
-const Container = styled.View`
+const Container = styled.SafeAreaView`
   height: 100%;
   width: 100%;
   justify-content: center;
