@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 type Weight = 'light' | 'regular' | 'medium' | 'bold';
 
-type FontSize = 'small' | 'medium' | 'large';
+type FontSize = 'tiny' | 'small' | 'medium' | 'large';
 
 const fontSize = {
   tiny: 1,

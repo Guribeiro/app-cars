@@ -17,7 +17,7 @@ const Welcome = (): JSX.Element => {
         <Text size="large">
           Cadastro de <TextEmphasized size="large">carros</TextEmphasized>
         </Text>
-        <SmallText size="small">
+        <SmallText size="tiny">
           Tenha os seus favoritos na palma {'\n'} da sua mão
         </SmallText>
         <BackgroundImage source={homeBackground} />
