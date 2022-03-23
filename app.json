@@ -16,7 +16,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.guribeiro.app-cars",
+      "bundleIdentifier": "com.guribeiro.appcars",
       "buildNumber": "1.0.0"
     },
     "android": {
@@ -24,7 +24,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#151417"
       },
-      "package": "com.guribeiro.app-cars",
+      "package": "com.guribeiro.appcars",
       "versionCode": 1
     },
     "web": {
