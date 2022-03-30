@@ -92,7 +92,7 @@ $ yarn start
 ```
 
 ```bash
-#For running it emulator, make sure you've installed Android Studio
+#For running it on emulator, make sure you've installed Android Studio
 
 #Step 1 - Click on 'More Actions' > 'Virtual Device Mananger'
 
