@@ -1,0 +1,36 @@
+{
+  "cars": [
+    {
+      "_id": "62383d54f8037d001c59e11c",
+      "title": "Corola",
+      "brand": "Toyota",
+      "price": "70000",
+      "age": 2010,
+      "__v": 0
+    },
+    {
+      "_id": "62383d95f8037d001c59e11e",
+      "title": "Celta",
+      "brand": "Chevrolet ",
+      "price": "20000",
+      "age": 2014,
+      "__v": 0
+    },
+    {
+      "_id": "62383dcaf8037d001c59e120",
+      "title": "GT",
+      "brand": "Ferrari",
+      "price": "270000",
+      "age": 2010,
+      "__v": 0
+    },
+    {
+      "_id": "62383e53f8037d001c59e122",
+      "title": "Camaro",
+      "brand": "Chevrolet",
+      "price": "40000",
+      "age": 1967,
+      "__v": 0
+    }
+  ]
+}

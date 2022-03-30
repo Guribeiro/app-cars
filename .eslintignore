@@ -4,3 +4,5 @@ build
 /*.js
 package.json
 app.json
+db.json
+db-*
