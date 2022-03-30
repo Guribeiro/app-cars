@@ -125,28 +125,35 @@ const CarProvider = ({ children }: CarProviderProps): JSX.Element => {
 
   useEffect(() => {
     const loadCars = async () => {
-      setLoading(true);
-      await loadStoragedCars();
-      const { data } = await api.get('/cars');
+      try {
+        setLoading(true);
+        await loadStoragedCars();
+        const { data } = await api.get<Cars>('/cars');
 
-      const response = data as Cars;
+        const carsFormatted = data.map(car => ({
+          ...car,
+          brand: car.brand.trim(),
+          priceFormatted: currencyFormatter(Number(car.price)),
+        }));
 
-      const carsFormatted = response.map(car => ({
-        ...car,
-        brand: car.brand.trim(),
-        priceFormatted: currencyFormatter(Number(car.price)),
-      }));
+        await AsyncStorage.setItem(
+          '@app-cars/cars',
+          JSON.stringify(carsFormatted),
+        );
 
-      await AsyncStorage.setItem(
-        '@app-cars/cars',
-        JSON.stringify(carsFormatted),
-      );
-
-      setCars(carsFormatted);
-      setLoading(false);
+        setCars(carsFormatted);
+      } catch (error) {
+        const message = verifyCodeError(error);
+        alert({
+          type: 'error',
+          message,
+        });
+      } finally {
+        setLoading(false);
+      }
     };
     loadCars();
-  }, []);
+  }, [alert]);
 
   const numberedCars = useMemo(() => {
     return cars.length;
@@ -236,10 +243,11 @@ const CarProvider = ({ children }: CarProviderProps): JSX.Element => {
           message: 'Carro foi atualizado com sucesso',
         });
       } catch (error) {
+        const message = verifyCodeError(error);
         alert({
           type: 'error',
           title: 'Falha',
-          message: 'Não foi possível atualizar esse carro',
+          message,
         });
       } finally {
         setLoading(false);
@@ -253,9 +261,10 @@ const CarProvider = ({ children }: CarProviderProps): JSX.Element => {
       setLoading(true);
       if (!carData) return;
       const { _id } = carData;
-      const { data } = await api.delete<Car>(`/cars/${_id}`);
 
-      const filteredCars = cars.filter(findCar => findCar._id !== data._id);
+      await api.delete<Car>(`/cars/${_id}`);
+
+      const filteredCars = cars.filter(findCar => findCar._id !== _id);
 
       setCars(filteredCars);
 
