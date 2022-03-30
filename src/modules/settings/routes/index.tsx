@@ -1,10 +1,9 @@
 import React from 'react';
-import { useTheme } from '@shared/hooks/theme';
 import { createStackNavigator } from '@react-navigation/stack';
-import Header from '@shared/components/Header';
 
+import Header from '@shared/components/Header';
+import { useTheme } from '@shared/hooks/theme';
 import SettingsScreen from '@modules/settings/screens/Settings';
-// import ThemesScreen from '../screens/themes';
 
 const SettingsStack = createStackNavigator();
 
@@ -27,13 +26,6 @@ const SettingsRoutes = (): JSX.Element => {
           header: () => <Header type="back" navigation={navigation} />,
         })}
       />
-      {/* <SettingsStack.Screen
-        name="ThemesScreen"
-        component={ThemesScreen}
-        options={{
-          headerShown: false,
-        }}
-      /> */}
     </SettingsStack.Navigator>
   );
 };

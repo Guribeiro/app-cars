@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Profile from '@modules/profile/screens/Profile';
-import UpdateUserName from '@modules/profile/screens/UpdateUserName';
 import Header from '@shared/components/Header';
 import { useTheme } from '@shared/hooks/theme';
+import Profile from '@modules/profile/screens/Profile';
+import UpdateUserName from '@modules/profile/screens/UpdateUserName';
 
 const ProfileStack = createStackNavigator();
 
